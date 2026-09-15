@@ -1,0 +1,101 @@
+/* ============================================================
+   Lelki Klíma — Design tokens
+   Ported from the Lelki Klíma design system (colors, type, spacing).
+   Paper-and-ink, with two accents drawn from sacred-art tradition:
+   Madonna blue (structural / interactive) and antique gold
+   (ceremonial highlight). Warm bone neutrals hold them together.
+   ============================================================ */
+
+:root {
+  /* ---- Base neutrals: warm paper → warm ink ---- */
+  --bone-50:  #FCFAF5;
+  --bone-100: #FAF7F0;
+  --bone-200: #F3EEE3;
+  --bone-300: #E9E2D3;
+  --line-200: #E0D8C8;
+  --line-300: #D2C8B4;
+  --line-400: #BCB09A;
+
+  --ink-900: #1E1B16;
+  --ink-700: #3D382F;
+  --ink-500: #6B6456;
+  --ink-400: #908876;
+  --ink-300: #B4AC9A;
+
+  /* ---- Madonna blue (deep ultramarine) — primary accent ---- */
+  --blue-900: #16264A;
+  --blue-800: #1E376B;
+  --blue-700: #2A4C8F;
+  --blue-600: #38609F;
+  --blue-500: #5277B0;
+  --blue-300: #9DB1D2;
+  --blue-200: #C7D2E7;
+  --blue-100: #E6EAF4;
+
+  /* ---- Antique gold — ceremonial accent ---- */
+  --gold-800: #6B5219;
+  --gold-700: #846327;
+  --gold-600: #A07C2E;
+  --gold-500: #BD9A45;
+  --gold-400: #D0B36A;
+  --gold-300: #E0C892;
+  --gold-200: #EEDFBC;
+  --gold-100: #F5ECD6;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:    var(--bone-100);
+  --surface-sunk:    var(--bone-200);
+  --surface-card:    var(--bone-50);
+  --surface-inverse: var(--blue-900);
+
+  --text-strong: var(--ink-900);
+  --text-body:   var(--ink-700);
+  --text-muted:  var(--ink-500);
+  --text-accent: var(--blue-700);
+  --text-gold:      var(--gold-700);
+  --text-gold-lg:   var(--gold-600);
+
+  --border-faint:   var(--line-200);
+  --border-default: var(--line-300);
+  --border-strong:  var(--line-400);
+
+  /* ---- Families ---- */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:  'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* ---- Spacing scale (4px base) ---- */
+  --space-0:  0;
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-7:  2.5rem;
+  --space-8:  3rem;
+  --space-9:  4rem;
+  --space-10: 6rem;
+  --space-11: 8rem;
+  --space-12: 12rem;
+
+  /* ---- Radii ---- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* ---- Layout ---- */
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --page-max: 1180px;
+
+  /* ---- Motion — slow, calm, no bounce ---- */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-inout: cubic-bezier(0.45, 0.05, 0.25, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+}

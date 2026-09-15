@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lelki klíma — pszichológiai műhely</title>
+<meta name="description" content="Szendrey-Nagy Olivér pszichológus műhelye Nagymaroson. Egyéni és szervezeti munka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="is-home" data-view="home">
+<div class="lk-page">
+
+  <!-- ============ FEJLÉC: hullám-menü · logó középen · foglalás ============ -->
+  <header class="lk-header">
+    <div class="lk-header__inner">
+      <button type="button" id="menu-toggle" class="lk-menu-btn" aria-label="Menü" aria-expanded="false">
+        <img src="assets/img/motif-weather-wave-light.svg" alt="">
+      </button>
+
+      <a href="#top" class="lk-wordmark">
+        <img src="assets/img/motif-sun.svg" alt="" aria-hidden="true">
+        <span>lelki&nbsp;klíma</span>
+      </a>
+
+      <a href="#kapcsolat" class="lk-cloud lk-cloud--nav">
+        <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+          <defs><radialGradient id="lkc-nav" cx="50%" cy="56%" r="62%">
+            <stop offset="0%" stop-color="#FCFAF5" stop-opacity="0.5"/>
+            <stop offset="55%" stop-color="#FCFAF5" stop-opacity="0.26"/>
+            <stop offset="100%" stop-color="#FCFAF5" stop-opacity="0"/>
+          </radialGradient></defs>
+          <path d="M22 67C8 66 4 58 9 51C13 44 19 38 27 34C34 31 39 26 48 22C58 18 69 17 79 20C87 14 99 12 110 13C121 14 130 18 137 23C145 19 156 19 164 23C172 27 177 31 185 31C195 31 205 34 212 39C219 44 226 51 229 57C232 63 227 68 218 68C204 69 189 63 171 70C139 76 54 69 22 67Z" fill="url(#lkc-nav)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>FOGLALÁS</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ MENÜ-FÁTYOL ============ -->
+  <div id="menu-overlay" class="lk-menu-overlay">
+    <a href="#bemutatkozas">bemutatkozás</a>
+    <a href="#szolgaltatasok">szolgáltatások</a>
+    <a href="#kapcsolat">kapcsolat</a>
+  </div>
+
+  <!-- ============ FŐOLDAL ============ -->
+  <div class="lk-view is-active" data-view="home">
+    <div class="lk-snap">
+      <section id="top" class="lk-hero">
+        <img class="lk-hero__sun" src="assets/img/motif-sun.svg" alt="">
+        <h1>lelki klíma</h1>
+        <p class="lk-hero__eyebrow">PSZICHOLÓGIAI MŰHELY</p>
+        <div class="lk-hero__definition">
+          <p>(fn.) A lelki és közösségi élet alaprétege. Az a sajátos minőség, amiben berendezkedünk, az életrend, amelyben a mindennapjainkat éljük: gondolataink, érzéseink, szokásaink és kapcsolataink együtt formált közege.</p>
+          <p>Szendrey-Nagy Olivér vagyok, pszichológus.<br>Abban segítek, hogy a hozzám fordulók otthonosan érezzék magukat az életükben.</p>
+        </div>
+      </section>
+
+      <section class="lk-menuband lk-menuband--bemutatkozas">
+        <a href="#bemutatkozas">bemutatkozás</a>
+      </section>
+
+      <section class="lk-menuband lk-menuband--szolgaltatasok">
+        <a href="#szolgaltatasok">szolgáltatások</a>
+      </section>
+
+      <section class="lk-menuband lk-menuband--kapcsolat">
+        <div class="lk-menuband__body">
+          <a href="#kapcsolat">kapcsolat</a>
+        </div>
+        <footer class="lk-footer lk-footer--flush">
+          <div class="lk-footer__inner">
+            <div class="lk-footer__brand">
+              <img src="assets/img/motif-sun.svg" alt="">
+              <span>lelki klíma</span>
+            </div>
+            <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </div>
+
+  <!-- ============ BEMUTATKOZÁS ============ -->
+  <div class="lk-view" data-view="bemutatkozas">
+    <section class="lk-sub lk-sub--light">
+      <div class="lk-container">
+        <div class="lk-pillrow">
+          <span class="lk-cloud lk-cloud--pill lk-cloud--label">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-bem-label" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M24 68C10 67 5 60 9 53C13 46 20 39 28 35C36 31 41 25 51 21C61 17 73 17 82 21C90 25 98 25 106 21C115 17 127 17 137 21C146 25 151 30 159 31C168 32 178 32 186 34C196 36 206 40 213 45C220 50 226 56 228 61C230 66 225 69 216 69C202 70 186 71 168 70C136 69 108 76 86 70C58 63 44 73 24 68Z" fill="url(#lkc-bem-label)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>BEMUTATKOZÁS</span>
+          </span>
+          <a href="#top" class="lk-cloud lk-cloud--pill">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-bem-back" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M22 67C8 66 4 58 9 51C13 44 19 38 27 34C34 31 39 26 48 22C58 18 69 17 79 20C87 14 99 12 110 13C121 14 130 18 137 23C145 19 156 19 164 23C172 27 177 31 185 31C195 31 205 34 212 39C219 44 226 51 229 57C232 63 227 68 218 68C204 69 189 63 171 70C139 76 54 69 22 67Z" fill="url(#lkc-bem-back)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>‹ VISSZA</span>
+          </a>
+        </div>
+
+        <div>
+          <h2>Szendrey-Nagy Olivér, pszichológus.</h2>
+          <div class="lk-bio">
+            <div class="lk-bio-stack">
+              <img class="lk-bio-img" src="assets/img/portrait-oliver.jpg" alt="Szendrey-Nagy Olivér" width="1400" height="934">
+              <div>
+                <p>Nem légüres térben élünk. Csak a saját kontextusunkban érthetjük meg magunkat, abban a viszonyrendszerben, amelyben a nehézségeink felmerülnek. Ennek kibontásához a felelősségünk és szabadságunk felfedezése elengedhetetlen. Ebben szeretnék segíteni.</p>
+                <p>A hozzám legközelebb álló megközelítés a humanisztikus-egzisztenciális pszichológia és a rendszerszemlélet: az ember szorongással való szembenézése és kiteljesedésre való törekvése.</p>
+                <p>Tanulmányaimat Budapesten és Rómában végeztem, a Pázmány Péter Katolikus Egyetemen, a Károli Gáspár Református Egyetemen, a Budapesti Műszaki Egyetemen és a Libera Università Maria SS. Assuntán.</p>
+              </div>
+            </div>
+            <p>Képzésben lévő munka- és szervezet szakpszichológusként kis, közepes méretű szervezetekkel és vezetőkkel dolgozom. Helyzetre szabott megoldásokkal segítek, hogy a rend és a kreativitás egymást erősítve működjön és ne a másik ellenében. Projektmenedzserként több csapatot kísértem, így a belső, céges működést is ismerem.</p>
+            <p>Alkotó ember vagyok, művészeti projektekkel is foglalkozom, dalszerző-énekesként, zeneszerzőként, filmes szakemberként.<br>Klienseket Nagymaroson és online fogadok.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="lk-footer lk-footer--gap">
+        <div class="lk-footer__inner">
+          <div class="lk-footer__brand">
+            <img src="assets/img/motif-sun.svg" alt="">
+            <span>lelki klíma</span>
+          </div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============ SZOLGÁLTATÁSOK ============ -->
+  <div class="lk-view" data-view="szolgaltatasok">
+    <section class="lk-sub lk-sub--light">
+      <div class="lk-container">
+        <div class="lk-pillrow">
+          <span class="lk-cloud lk-cloud--pill lk-cloud--label">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-szo-label" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M23 67C9 66 4 59 8 52C12 45 18 39 26 35C33 32 37 26 45 23C54 19 64 19 72 23C79 18 89 16 98 17C107 18 114 22 119 26C126 21 136 20 145 23C153 26 158 31 166 32C175 33 185 34 193 37C202 40 210 45 216 50C222 55 227 60 226 64C225 68 219 69 210 69C197 70 184 70 166 70C148 70 136 63 116 70C88 77 55 68 23 67Z" fill="url(#lkc-szo-label)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>SZOLGÁLTATÁSOK</span>
+          </span>
+          <a href="#top" class="lk-cloud lk-cloud--pill">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-szo-back" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M22 67C8 66 4 58 9 51C13 44 19 38 27 34C34 31 39 26 48 22C58 18 69 17 79 20C87 14 99 12 110 13C121 14 130 18 137 23C145 19 156 19 164 23C172 27 177 31 185 31C195 31 205 34 212 39C219 44 226 51 229 57C232 63 227 68 218 68C204 69 189 63 171 70C139 76 54 69 22 67Z" fill="url(#lkc-szo-back)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>‹ VISSZA</span>
+          </a>
+        </div>
+
+        <h2>Egyéni és szervezeti munka.</h2>
+
+        <div class="lk-priced-list">
+          <div class="lk-priced">
+            <span class="lk-priced__num">01</span>
+            <span>
+              <span class="lk-priced__title">Egyéni konzultáció</span>
+              <span class="lk-priced__desc">Négyszemközti munka. 50 perces alkalom, személyesen vagy online.</span>
+            </span>
+            <span class="lk-priced__price">22 000 Ft <small>/ alkalom</small></span>
+          </div>
+          <div class="lk-priced">
+            <span class="lk-priced__num">02</span>
+            <span>
+              <span class="lk-priced__title">Szervezeteknek</span>
+              <span class="lk-priced__desc">Struktúra, szerepek, együttműködés. Vezetői és csapatfejlesztő folyamatok.</span>
+            </span>
+            <span class="lk-priced__price lk-priced__price--custom">Egyedi ajánlat</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="lk-info-heading">Hasznos információ</h3>
+          <div class="lk-grid3">
+            <div class="lk-grid3__card">
+              <div class="lk-grid3__num">01</div>
+              <div class="lk-grid3__title">Titoktartás</div>
+              <div class="lk-grid3__desc">A konzultáción elhangzottakat bizalmasan kezelem, a Pszichológusok Szakmai Etikai Kódexe szerint.</div>
+            </div>
+            <div class="lk-grid3__card">
+              <div class="lk-grid3__num">02</div>
+              <div class="lk-grid3__title">Lemondás</div>
+              <div class="lk-grid3__desc">A megbeszélt időpont az alkalom kezdete előtt 48 órával díjmentesen lemondható. Ezen belül a fenntartott alkalom teljes díja fizetendő, kivéve az előre nem látható, vis maior eseteket, mint baleset vagy betegség.</div>
+            </div>
+            <div class="lk-grid3__card">
+              <div class="lk-grid3__num">03</div>
+              <div class="lk-grid3__title">Fizetés</div>
+              <div class="lk-grid3__desc">Az alkalom után, átutalással vagy készpénzben.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="lk-footer lk-footer--gap">
+        <div class="lk-footer__inner">
+          <div class="lk-footer__brand">
+            <img src="assets/img/motif-sun.svg" alt="">
+            <span>lelki klíma</span>
+          </div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============ KAPCSOLAT ============ -->
+  <div class="lk-view" data-view="kapcsolat">
+    <section class="lk-sub lk-sub--dark">
+      <div class="lk-container" style="width:100%;flex:1;">
+        <div class="lk-pillrow">
+          <span class="lk-cloud lk-cloud--pill lk-cloud--label">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-kap-label" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#0D1730" stop-opacity="0.6"/>
+                <stop offset="55%" stop-color="#0D1730" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#0D1730" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M23 67C9 66 4 59 8 52C12 45 18 39 26 35C33 32 37 26 45 23C54 19 64 19 72 23C79 18 89 16 98 17C107 18 114 22 119 26C126 21 136 20 145 23C153 26 158 31 166 32C175 33 185 34 193 37C202 40 210 45 216 50C222 55 227 60 226 64C225 68 219 69 210 69C197 70 184 70 166 70C148 70 136 63 116 70C88 77 55 68 23 67Z" fill="url(#lkc-kap-label)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>KAPCSOLAT</span>
+          </span>
+          <a href="#top" class="lk-cloud lk-cloud--pill">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-kap-back" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#0D1730" stop-opacity="0.6"/>
+                <stop offset="55%" stop-color="#0D1730" stop-opacity="0.32"/>
+                <stop offset="100%" stop-color="#0D1730" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M24 68C10 67 5 60 9 53C13 46 20 39 28 35C36 31 41 25 51 21C61 17 73 17 82 21C90 25 98 25 106 21C115 17 127 17 137 21C146 25 151 30 159 31C168 32 178 32 186 34C196 36 206 40 213 45C220 50 226 56 228 61C230 66 225 69 216 69C202 70 186 71 168 70C136 69 108 76 86 70C58 63 44 73 24 68Z" fill="url(#lkc-kap-back)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>‹ VISSZA</span>
+          </a>
+        </div>
+
+        <div class="lk-stack">
+          <div class="lk-contact-info">
+            <h2>Írj vagy hívj.</h2>
+            <dl>
+              <div class="lk-contact-row">
+                <dt>CÍM</dt>
+                <dd>2626 Nagymaros, Aranyos utca 16</dd>
+              </div>
+              <div class="lk-contact-row">
+                <dt>E-MAIL</dt>
+                <dd><a href="mailto:oliver@lelkiklima.hu">oliver@lelkiklima.hu</a></dd>
+              </div>
+              <div class="lk-contact-row" style="border-bottom:none;">
+                <dt>TELEFON</dt>
+                <dd><a href="tel:+36305689577">+36 30 568 9577</a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <form id="contact-form" class="lk-form">
+            <div class="lk-form__fields">
+              <label for="lk-name">NÉV
+                <input type="text" id="lk-name" name="name" placeholder="A neved">
+              </label>
+              <label for="lk-email">E-MAIL
+                <input type="email" id="lk-email" name="email" placeholder="te@example.hu">
+              </label>
+              <label for="lk-message">ÜZENET
+                <textarea rows="4" id="lk-message" name="message" placeholder="Miben segíthetek?"></textarea>
+              </label>
+              <label class="lk-form__consent">
+                <input type="checkbox" name="newsletter">
+                <span>Szeretnék hírlevelet kapni a közelgő eseményekről.</span>
+              </label>
+              <button type="submit" class="lk-cloud lk-cloud--submit">
+                <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><radialGradient id="lkc-submit" cx="50%" cy="56%" r="62%">
+                    <stop offset="0%" stop-color="#FCFAF5" stop-opacity="0.5"/>
+                    <stop offset="55%" stop-color="#FCFAF5" stop-opacity="0.26"/>
+                    <stop offset="100%" stop-color="#FCFAF5" stop-opacity="0"/>
+                  </radialGradient></defs>
+                  <path d="M24 68C10 67 5 60 9 53C13 46 20 39 28 35C36 31 41 25 51 21C61 17 73 17 82 21C90 25 98 25 106 21C115 17 127 17 137 21C146 25 151 30 159 31C168 32 178 32 186 34C196 36 206 40 213 45C220 50 226 56 228 61C230 66 225 69 216 69C202 70 186 71 168 70C136 69 108 76 86 70C58 63 44 73 24 68Z" fill="url(#lkc-submit)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="submit-label">Üzenet küldése</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer class="lk-footer lk-footer--gap">
+        <div class="lk-footer__inner">
+          <div class="lk-footer__brand">
+            <img src="assets/img/motif-sun.svg" alt="">
+            <span>lelki klíma</span>
+          </div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
