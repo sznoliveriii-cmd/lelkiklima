@@ -6,6 +6,12 @@
   var views = document.querySelectorAll('.lk-view');
   var menuToggle = document.getElementById('menu-toggle');
   var menuOverlay = document.getElementById('menu-overlay');
+  var homeSnap = document.querySelector('.lk-snap');
+  var form = document.getElementById('contact-form');
+  var submitLabel = document.getElementById('submit-label');
+  var SENT_LABEL = 'Köszönöm, hamarosan válaszolok.';
+  var DEFAULT_LABEL = submitLabel.textContent;
+  var submitted = false;
 
   function currentView() {
     var hash = (location.hash || '').replace('#', '');
@@ -26,6 +32,12 @@
     });
     closeMenu();
     window.scrollTo(0, 0);
+    if (view === 'home' && homeSnap) homeSnap.scrollTop = 0;
+    if (view !== 'kapcsolat' && submitted) {
+      form.reset();
+      submitLabel.textContent = DEFAULT_LABEL;
+      submitted = false;
+    }
   }
 
   window.addEventListener('hashchange', render);
@@ -40,10 +52,9 @@
     if (e.target.tagName !== 'A') closeMenu();
   });
 
-  var form = document.getElementById('contact-form');
-  var submitLabel = document.getElementById('submit-label');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    submitLabel.textContent = 'Köszönöm, hamarosan válaszolok.';
+    submitLabel.textContent = SENT_LABEL;
+    submitted = true;
   });
 })();

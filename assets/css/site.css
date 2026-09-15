@@ -423,6 +423,7 @@ a.lk-cloud--pill.lk-cloud--label:hover { color: var(--gold-300); }
 .lk-priced__price--custom { color: var(--text-gold-lg); }
 .lk-priced__price small { font-size: 0.875rem; color: var(--text-muted); }
 
+.lk-info-block { margin-top: var(--space-10); }
 .lk-info-heading {
   font-family: var(--font-serif);
   font-weight: 300;
