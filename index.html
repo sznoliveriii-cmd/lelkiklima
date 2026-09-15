@@ -273,7 +273,10 @@
             </dl>
           </div>
 
-          <form id="contact-form" class="lk-form">
+          <form id="contact-form" class="lk-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="22b2b26d-1ee6-4a15-8838-b20edb2f5b81">
+            <input type="hidden" name="subject" value="Új üzenet a lelkiklima.hu honlapról">
+            <input type="checkbox" name="botcheck" class="lk-honeypot" tabindex="-1" autocomplete="off">
             <div class="lk-form__fields">
               <label for="lk-name">NÉV
                 <input type="text" id="lk-name" name="name" placeholder="A neved">

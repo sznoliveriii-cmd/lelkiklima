@@ -8,9 +8,12 @@
   var menuOverlay = document.getElementById('menu-overlay');
   var homeSnap = document.querySelector('.lk-snap');
   var form = document.getElementById('contact-form');
+  var submitBtn = form.querySelector('button[type="submit"]');
   var submitLabel = document.getElementById('submit-label');
-  var SENT_LABEL = 'Köszönöm, hamarosan válaszolok.';
   var DEFAULT_LABEL = submitLabel.textContent;
+  var SENDING_LABEL = 'Küldés...';
+  var SENT_LABEL = 'Köszönöm, üzeneted megérkezett.';
+  var ERROR_LABEL = 'Hiba történt, próbáld újra.';
   var submitted = false;
 
   function currentView() {
@@ -36,6 +39,7 @@
     if (view !== 'kapcsolat' && submitted) {
       form.reset();
       submitLabel.textContent = DEFAULT_LABEL;
+      submitBtn.disabled = false;
       submitted = false;
     }
   }
@@ -54,7 +58,30 @@
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    submitLabel.textContent = SENT_LABEL;
-    submitted = true;
+
+    if (form.elements.botcheck && form.elements.botcheck.checked) return;
+
+    submitBtn.disabled = true;
+    submitLabel.textContent = SENDING_LABEL;
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          submitLabel.textContent = SENT_LABEL;
+          submitted = true;
+        } else {
+          submitLabel.textContent = ERROR_LABEL;
+          submitBtn.disabled = false;
+        }
+      })
+      .catch(function () {
+        submitLabel.textContent = ERROR_LABEL;
+        submitBtn.disabled = false;
+      });
   });
 })();
