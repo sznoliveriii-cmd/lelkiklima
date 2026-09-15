@@ -257,6 +257,7 @@ a.lk-cloud--pill.lk-cloud--label:hover { color: var(--gold-300); }
   min-height: 100vh;
   height: auto;
   flex-direction: column;
+  align-items: stretch;
   padding: 0;
   background: linear-gradient(in oklab, var(--bone-200) 0%, var(--blue-900) 62%);
 }
