@@ -2,9 +2,40 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+  try {
+    if (localStorage.getItem('lk-consent') === 'granted') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+        analytics_storage: 'granted'
+      });
+    }
+  } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPJYG3P9KR"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-SPJYG3P9KR');
+</script>
 <title>lelki klíma · pszichológiai műhely</title>
 <meta name="description" content="Szendrey-Nagy Olivér pszichológus műhelye Nagymaroson. Egyéni és szervezeti munka.">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lelkiklima.hu/">
@@ -29,19 +60,25 @@
 <body class="is-home" data-view="home">
 <div class="lk-page">
 
-  <!-- ============ FEJLÉC: hullám-menü · logó középen · foglalás ============ -->
+  <!-- ============ FEJLÉC: felső sáv · hullám-menü · logó középen · foglalás ============ -->
   <header class="lk-header">
+    <div class="lk-strip">
+      <div class="lk-strip__row">
+        <span class="lk-strip__txt">Decemberi és januári szabad időpontok.</span>
+        <a class="lk-strip__btn" href="https://cal.com/lelkiklima" target="_blank" rel="noopener" data-cal-link="lelkiklima" data-cal-config='{"layout":"month_view"}'>Időpontfoglalás ›</a>
+      </div>
+    </div>
     <div class="lk-header__inner">
       <button type="button" id="menu-toggle" class="lk-menu-btn" aria-label="Menü" aria-expanded="false">
-        <img src="assets/img/motif-weather-wave-light.svg" alt="">
+        <img src="assets/img/motif-weather-wave-light.svg" alt="" width="100" height="100">
       </button>
 
       <a href="#top" class="lk-wordmark">
-        <img src="assets/img/motif-sun.svg" alt="" aria-hidden="true">
+        <img src="assets/img/motif-sun.svg" alt="" aria-hidden="true" width="100" height="100">
         <span>lelki&nbsp;klíma</span>
       </a>
 
-      <a href="#kapcsolat" class="lk-cloud lk-cloud--nav">
+      <a href="https://cal.com/lelkiklima" target="_blank" rel="noopener" data-cal-link="lelkiklima" data-cal-config='{"layout":"month_view"}' class="lk-cloud lk-cloud--nav">
         <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
           <defs><radialGradient id="lkc-nav" cx="50%" cy="56%" r="62%">
             <stop offset="0%" stop-color="#FCFAF5" stop-opacity="0.5"/>
@@ -66,12 +103,18 @@
   <div class="lk-view is-active" data-view="home">
     <div class="lk-snap">
       <section id="top" class="lk-hero">
-        <img class="lk-hero__sun" src="assets/img/motif-sun.svg" alt="">
+        <img class="lk-hero__sun" src="assets/img/motif-sun.svg" alt="" width="100" height="100">
         <h1>lelki klíma</h1>
         <p class="lk-hero__eyebrow">PSZICHOLÓGIAI MŰHELY</p>
-        <div class="lk-hero__definition">
-          <p>(fn.) A lelki és közösségi élet alaprétege. Az a sajátos minőség, amiben berendezkedünk, az életrend, amelyben a mindennapjainkat éljük: gondolataink, érzéseink, szokásaink és kapcsolataink együtt formált közege.</p>
-          <p>Szendrey-Nagy Olivér vagyok, pszichológus.<br>Abban segítek, hogy a hozzám fordulók otthonosan érezzék magukat az életükben.</p>
+        <div class="lk-hero__grid">
+          <div class="lk-hero__definition">
+            <p>(fn.) A lelki és közösségi élet alaprétege. Az a sajátos minőség, amiben berendezkedünk, az életrend, amelyben a mindennapjainkat éljük: gondolataink, érzéseink, szokásaink és kapcsolataink együtt formált közege.</p>
+            <p>Szendrey-Nagy Olivér vagyok, pszichológus.<br>Abban segítek, hogy a hozzám fordulók otthonosan érezzék magukat az életükben.</p>
+          </div>
+          <picture>
+            <source media="(max-width: 720px)" srcset="assets/img/portre-nyitolap-mobil.webp" width="800" height="800">
+            <img class="lk-hero__img" src="assets/img/portre-nyitolap-asztal.webp" alt="Szendrey-Nagy Olivér" width="720" height="900">
+          </picture>
         </div>
       </section>
 
@@ -90,10 +133,10 @@
         <footer class="lk-footer lk-footer--flush">
           <div class="lk-footer__inner">
             <div class="lk-footer__brand">
-              <img src="assets/img/motif-sun.svg" alt="">
+              <img src="assets/img/motif-sun.svg" alt="" width="100" height="100">
               <span>lelki klíma</span>
             </div>
-            <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+            <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span><a href="#adatvedelem">ADATVÉDELEM</a><button type="button" data-consent-open>SÜTIBEÁLLÍTÁSOK</button></div>
           </div>
         </footer>
       </section>
@@ -130,10 +173,10 @@
         </div>
 
         <div>
-          <h2>Szendrey-Nagy Olivér, pszichológus.</h2>
+          <h2 style="max-width:24ch;margin-bottom:var(--space-7);">Szendrey-Nagy Olivér, pszichológus.</h2>
           <div class="lk-bio">
             <div class="lk-bio-stack">
-              <img class="lk-bio-img" src="assets/img/portrait-oliver.jpg" alt="Szendrey-Nagy Olivér" width="1400" height="934">
+              <img class="lk-bio-img" src="assets/img/foto-szoba-fekvo.webp" alt="A nagymarosi rendelő" width="1500" height="1000" loading="lazy">
               <div>
                 <p>Nem légüres térben élünk. Csak a saját kontextusunkban érthetjük meg magunkat, abban a viszonyrendszerben, amelyben a nehézségeink felmerülnek. Ennek kibontásához a felelősségünk és szabadságunk felfedezése elengedhetetlen. Ebben szeretnék segíteni. Dolgozom élethelyzeti és kapcsolati nehézségekkel, szorongással, döntésképtelenséggel, kiégéssel, gyásszal.</p>
                 <p>A hozzám legközelebb álló megközelítés a humanisztikus-egzisztenciális pszichológia és a rendszerszemlélet: az ember szorongással való szembenézése és kiteljesedésre való törekvése.</p>
@@ -141,17 +184,17 @@
               </div>
             </div>
             <p>Képzésben lévő munka- és szervezet szakpszichológusként kis, közepes méretű szervezetekkel és vezetőkkel dolgozom. Helyzetre szabott megoldásokkal segítek, hogy a rend és a kreativitás egymást erősítve működjön és ne a másik ellenében. Projektmenedzserként több csapatot kísértem, így a belső, céges működést is ismerem.</p>
-            <p>Alkotó ember vagyok, művészeti projektekkel is foglalkozom, dalszerző-énekesként, zeneszerzőként, filmes szakemberként.<br>Klienseket Nagymaroson és online fogadok.</p>
+            <p>Alkotó ember vagyok, művészeti projektekkel is foglalkozom, dalszerző-énekesként, zeneszerzőként, filmes szakemberként.<br>Klienseket online és Nagymaroson fogadok.</p>
           </div>
         </div>
       </div>
       <footer class="lk-footer lk-footer--gap">
         <div class="lk-footer__inner">
           <div class="lk-footer__brand">
-            <img src="assets/img/motif-sun.svg" alt="">
+            <img src="assets/img/motif-sun.svg" alt="" width="100" height="100">
             <span>lelki klíma</span>
           </div>
-          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span><a href="#adatvedelem">ADATVÉDELEM</a><button type="button" data-consent-open>SÜTIBEÁLLÍTÁSOK</button></div>
         </div>
       </footer>
     </section>
@@ -193,7 +236,18 @@
             <span class="lk-priced__num">01</span>
             <span>
               <span class="lk-priced__title">Egyéni konzultáció</span>
-              <span class="lk-priced__desc">Négyszemközti munka. 50 perces alkalom, személyesen vagy online.</span>
+              <span class="lk-priced__desc">Négyszemközti munka. 50 perces alkalom, online vagy személyesen.</span>
+              <a href="https://cal.com/lelkiklima/50min" target="_blank" rel="noopener" data-cal-link="lelkiklima/50min" data-cal-config='{"layout":"month_view"}' class="lk-cloud lk-cloud--pill lk-priced__cta">
+                <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><radialGradient id="lkc-50min" cx="50%" cy="56%" r="62%">
+                    <stop offset="0%" stop-color="#16264A" stop-opacity="0.95"/>
+                    <stop offset="60%" stop-color="#16264A" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#16264A" stop-opacity="0.35"/>
+                  </radialGradient></defs>
+                  <path d="M24 68C10 67 5 60 9 53C13 46 20 39 28 35C36 31 41 25 51 21C61 17 73 17 82 21C90 25 98 25 106 21C115 17 127 17 137 21C146 25 151 30 159 31C168 32 178 32 186 34C196 36 206 40 213 45C220 50 226 56 228 61C230 66 225 69 216 69C202 70 186 71 168 70C136 69 108 76 86 70C58 63 44 73 24 68Z" fill="url(#lkc-50min)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>KONZULTÁCIÓ FOGLALÁSA</span>
+              </a>
             </span>
             <span class="lk-priced__price">22 000 Ft <small>/ alkalom</small></span>
           </div>
@@ -206,6 +260,8 @@
             <span class="lk-priced__price lk-priced__price--custom">Egyedi ajánlat</span>
           </div>
         </div>
+
+        <p class="lk-first-line">Első lépésként <a href="https://cal.com/lelkiklima/15min" target="_blank" rel="noopener" data-cal-link="lelkiklima/15min" data-cal-config='{"layout":"month_view"}'>foglalj egy díjmentes online bemutatkozó beszélgetést</a>.</p>
 
         <div class="lk-info-block">
           <h3 class="lk-info-heading">Hasznos információ</h3>
@@ -231,10 +287,125 @@
       <footer class="lk-footer lk-footer--gap">
         <div class="lk-footer__inner">
           <div class="lk-footer__brand">
-            <img src="assets/img/motif-sun.svg" alt="">
+            <img src="assets/img/motif-sun.svg" alt="" width="100" height="100">
             <span>lelki klíma</span>
           </div>
-          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span><a href="#adatvedelem">ADATVÉDELEM</a><button type="button" data-consent-open>SÜTIBEÁLLÍTÁSOK</button></div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ============ ADATVÉDELEM ============ -->
+  <div class="lk-view" data-view="adatvedelem">
+    <section class="lk-sub lk-sub--light lk-sub--long">
+      <div class="lk-container">
+        <div class="lk-pillrow">
+          <span class="lk-cloud lk-cloud--pill lk-cloud--label">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-adv-label" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M24 68C10 67 5 60 9 53C13 46 20 39 28 35C36 31 41 25 51 21C61 17 73 17 82 21C90 25 98 25 106 21C115 17 127 17 137 21C146 25 151 30 159 31C168 32 178 32 186 34C196 36 206 40 213 45C220 50 226 56 228 61C230 66 225 69 216 69C202 70 186 71 168 70C136 69 108 76 86 70C58 63 44 73 24 68Z" fill="url(#lkc-adv-label)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>ADATVÉDELEM</span>
+          </span>
+          <a href="#top" class="lk-cloud lk-cloud--pill">
+            <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+              <defs><radialGradient id="lkc-adv-back" cx="50%" cy="56%" r="62%">
+                <stop offset="0%" stop-color="#16264A" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#16264A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#16264A" stop-opacity="0"/>
+              </radialGradient></defs>
+              <path d="M23 67C9 66 4 59 8 52C12 45 18 39 26 35C33 32 37 26 45 23C54 19 64 19 72 23C79 18 89 16 98 17C107 18 114 22 119 26C126 21 136 20 145 23C153 26 158 31 166 32C175 33 185 34 193 37C202 40 210 45 216 50C222 55 227 60 226 64C225 68 219 69 210 69C197 70 184 70 166 70C148 70 136 63 116 70C88 77 55 68 23 67Z" fill="url(#lkc-adv-back)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>‹ VISSZA</span>
+          </a>
+        </div>
+
+        <h2>Adatvédelmi tájékoztató</h2>
+
+        <div class="lk-legal">
+          <p class="lk-legal__date">HATÁLYOS: 2026. NOVEMBER 24.</p>
+          <p>Ez a tájékoztató a lelkiklima.hu weboldal használata, a kapcsolatfelvétel és az időpontfoglalás során kezelt személyes adatokról szól. A konzultációk során keletkező szakmai dokumentációról az első alkalmon külön tájékoztatás és hozzájárulás történik.</p>
+
+          <h3>Adatkezelő</h3>
+          <p>Szendrey-Nagy Olivér egyéni vállalkozó, pszichológus<br>
+          Székhely: 2626 Nagymaros, Aranyos utca 16.<br>
+          Adószám: 40702225-1-25<br>
+          E-mail: <a href="mailto:oliver@lelkiklima.hu">oliver@lelkiklima.hu</a><br>
+          Telefon: <a href="tel:+36305689577">+36 30 568 9577</a></p>
+
+          <h3>Milyen adatokat, milyen célból</h3>
+
+          <h4>Kapcsolatfelvétel űrlapon, e-mailben vagy telefonon</h4>
+          <ul>
+            <li><strong>Adatok:</strong> név, e-mail-cím, telefonszám, az üzenet tartalma.</li>
+            <li><strong>Cél:</strong> a megkeresés megválaszolása, időpont egyeztetése.</li>
+            <li><strong>Jogalap:</strong> szerződéskötést megelőző lépések a megkereső kérésére (GDPR 6. cikk (1) b) pont). Ha az üzenet egészségi állapotra vonatkozó adatot tartalmaz, annak kezelése a megkereső kifejezett hozzájárulásán alapul (GDPR 9. cikk (2) a) pont), amelyet az üzenet önkéntes elküldésével ad meg.</li>
+            <li><strong>Időtartam:</strong> ha nem jön létre közös munka, a megkeresés lezárását követő legfeljebb 1 évig.</li>
+          </ul>
+          <p>Kérjük, a kapcsolatfelvétel során ne írj részletes egészségügyi információt. Erre az első beszélgetésen van mód.</p>
+
+          <h4>Időpontfoglalás</h4>
+          <ul>
+            <li><strong>Adatok:</strong> név, e-mail-cím, telefonszám (ha telefonos beszélgetést választasz), a foglalt időpont, a foglaláskor önkéntesen megadott válaszok.</li>
+            <li><strong>Cél:</strong> az időpont rögzítése, visszaigazolása, emlékeztető küldése.</li>
+            <li><strong>Jogalap:</strong> szerződés teljesítése, illetve az azt megelőző lépések (GDPR 6. cikk (1) b) pont).</li>
+            <li><strong>Időtartam:</strong> az utolsó időpontot követő legfeljebb 1 évig, kivéve, ha a közös munka miatt jogszabály hosszabb megőrzést ír elő.</li>
+          </ul>
+
+          <h4>Számlázás</h4>
+          <ul>
+            <li><strong>Adatok:</strong> név, cím, a szolgáltatás adatai, az összeg.</li>
+            <li><strong>Jogalap:</strong> jogi kötelezettség teljesítése (GDPR 6. cikk (1) c) pont).</li>
+            <li><strong>Időtartam:</strong> a számviteli törvény szerint 8 évig.</li>
+          </ul>
+
+          <h4>Látogatottságmérés és hirdetési mérés (sütik)</h4>
+          <ul>
+            <li><strong>Adatok:</strong> az eszköz és a böngésző adatai, a meglátogatott oldalak, a foglalás, az űrlapküldés és a telefonszámra kattintás ténye. Az üzenetek és a foglalások tartalma nem kerül át.</li>
+            <li><strong>Cél:</strong> annak mérése, hogyan használják az oldalt, és mely csatornákon keresztül érkeznek a megkeresések.</li>
+            <li><strong>Jogalap:</strong> hozzájárulás (GDPR 6. cikk (1) a) pont), amelyet a sütisávon lehet megadni vagy megtagadni. Hozzájárulás nélkül mérősüti nem kerül elhelyezésre.</li>
+            <li><strong>Időtartam:</strong> a Google Analytics adatmegőrzési beállítása szerint 2 hónap.</li>
+            <li>A hozzájárulás bármikor visszavonható az oldal láblécében található <button type="button" class="lk-legal__inline-btn" data-consent-open>Sütibeállítások</button> linkkel, vagy a böngésző sütijeinek törlésével, ekkor a sütisáv újra megjelenik.</li>
+          </ul>
+
+          <h3>Adatfeldolgozók</h3>
+          <div class="lk-legal__table">
+            <table>
+              <thead><tr><th>Szolgáltató</th><th>Szerep</th></tr></thead>
+              <tbody>
+                <tr><td>Google Ireland Ltd.</td><td>e-mail (Google Workspace), naptár, Google Meet, Google Analytics, Google Ads</td></tr>
+                <tr><td>Cal.com, Inc.</td><td>időpontfoglalás</td></tr>
+                <tr><td>GitHub, Inc.</td><td>a weboldal tárhelye</td></tr>
+                <tr><td>Web3Forms</td><td>az űrlap üzeneteinek továbbítása</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Az Egyesült Államokban működő szolgáltatók esetében az adattovábbítás az EU és az USA közötti adatvédelmi keretre vonatkozó európai bizottsági megfelelőségi határozat, illetve általános szerződési feltételek alapján történik.</p>
+          <p>Az adatokat más részére nem továbbítjuk, és nem értékesítjük.</p>
+
+          <h3>Jogaid</h3>
+          <ul>
+            <li>Tájékoztatást kérhetsz a rólad kezelt adatokról, és másolatot kaphatsz róluk.</li>
+            <li>Kérheted az adatok helyesbítését, törlését vagy kezelésük korlátozását.</li>
+            <li>Tiltakozhatsz az adatkezelés ellen, és kérheted az adatok hordozható formában való kiadását.</li>
+            <li>A hozzájárulásodat bármikor visszavonhatod. Ez nem érinti a visszavonás előtti adatkezelés jogszerűségét.</li>
+          </ul>
+          <p>Kérésedet az <a href="mailto:oliver@lelkiklima.hu">oliver@lelkiklima.hu</a> címre küldheted, legfeljebb egy hónapon belül választ kapsz.</p>
+          <p>Panasszal a Nemzeti Adatvédelmi és Információszabadság Hatósághoz fordulhatsz (1055 Budapest, Falk Miksa utca 9-11., postacím: 1363 Budapest, Pf. 9., <a href="mailto:ugyfelszolgalat@naih.hu">ugyfelszolgalat@naih.hu</a>, <a href="https://www.naih.hu" target="_blank" rel="noopener">www.naih.hu</a>), vagy bírósághoz.</p>
+        </div>
+      </div>
+      <footer class="lk-footer lk-footer--gap">
+        <div class="lk-footer__inner">
+          <div class="lk-footer__brand">
+            <img src="assets/img/motif-sun.svg" alt="" width="100" height="100">
+            <span>lelki klíma</span>
+          </div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span><a href="#adatvedelem">ADATVÉDELEM</a><button type="button" data-consent-open>SÜTIBEÁLLÍTÁSOK</button></div>
         </div>
       </footer>
     </section>
@@ -269,9 +440,31 @@
           </a>
         </div>
 
+        <div class="lk-stack lk-firststep">
+          <div>
+            <h2>Az első lépés</h2>
+            <p class="lk-firststep__lead">Írhatsz, vagy foglalhatsz egy tizenötperces bemutatkozó beszélgetést. Díjmentes, és semmire nem kötelez.</p>
+            <p class="lk-firststep__body">A beszélgetésen elmondod, mi hozott ide. Kiderül, hogy a közös munka jó irány-e. Ha igen, egyeztetünk időpontot az első alkalomra.</p>
+            <a href="https://cal.com/lelkiklima/15min" target="_blank" rel="noopener" data-cal-link="lelkiklima/15min" data-cal-config='{"layout":"month_view"}' class="lk-cloud lk-cloud--submit">
+              <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
+                <defs><radialGradient id="lkc-ell" cx="50%" cy="56%" r="62%">
+                  <stop offset="0%" stop-color="#FCFAF5" stop-opacity="0.5"/>
+                  <stop offset="55%" stop-color="#FCFAF5" stop-opacity="0.26"/>
+                  <stop offset="100%" stop-color="#FCFAF5" stop-opacity="0"/>
+                </radialGradient></defs>
+                <path d="M23 67C9 66 4 59 8 52C12 45 18 39 26 35C33 32 37 26 45 23C54 19 64 19 72 23C79 18 89 16 98 17C107 18 114 22 119 26C126 21 136 20 145 23C153 26 158 31 166 32C175 33 185 34 193 37C202 40 210 45 216 50C222 55 227 60 226 64C225 68 219 69 210 69C197 70 184 70 166 70C148 70 136 63 116 70C88 77 55 68 23 67Z" fill="url(#lkc-ell)" stroke="#E0C892" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Bemutatkozó beszélgetés foglalása</span>
+            </a>
+          </div>
+          <div class="lk-ph lk-first-sm">
+            <img src="assets/img/foto-fotel-fekvo.webp" alt="Fotel az ablak mellett" width="1500" height="1000" loading="lazy">
+          </div>
+        </div>
+
         <div class="lk-stack">
           <div class="lk-contact-info">
-            <h2>Írj vagy hívj.</h2>
+            <h2 style="margin-bottom:var(--space-6);max-width:16ch;">Írj vagy hívj.</h2>
             <dl>
               <div class="lk-contact-row">
                 <dt>CÍM</dt>
@@ -281,7 +474,7 @@
                 <dt>E-MAIL</dt>
                 <dd><a href="mailto:oliver@lelkiklima.hu">oliver@lelkiklima.hu</a></dd>
               </div>
-              <div class="lk-contact-row" style="border-bottom:none;">
+              <div class="lk-contact-row">
                 <dt>TELEFON</dt>
                 <dd><a href="tel:+36305689577">+36 30 568 9577</a></dd>
               </div>
@@ -294,16 +487,16 @@
             <input type="checkbox" name="botcheck" class="lk-honeypot" tabindex="-1" autocomplete="off">
             <div class="lk-form__fields">
               <label for="lk-name">NÉV
-                <input type="text" id="lk-name" name="name" placeholder="A neved">
+                <input type="text" id="lk-name" name="name" placeholder="A neved" autocomplete="name" required>
               </label>
               <label for="lk-email">E-MAIL
-                <input type="email" id="lk-email" name="email" placeholder="te@example.hu">
+                <input type="email" id="lk-email" name="email" placeholder="te@example.hu" autocomplete="email" required>
               </label>
               <label for="lk-message">ÜZENET
                 <textarea rows="4" id="lk-message" name="message" placeholder="Miben segíthetek?"></textarea>
               </label>
               <label class="lk-form__consent">
-                <input type="checkbox" name="newsletter">
+                <input type="checkbox" id="lk-newsletter" name="newsletter">
                 <span>Szeretnék hírlevelet kapni a közelgő eseményekről.</span>
               </label>
               <button type="submit" class="lk-cloud lk-cloud--submit">
@@ -324,16 +517,34 @@
       <footer class="lk-footer lk-footer--gap">
         <div class="lk-footer__inner">
           <div class="lk-footer__brand">
-            <img src="assets/img/motif-sun.svg" alt="">
+            <img src="assets/img/motif-sun.svg" alt="" width="100" height="100">
             <span>lelki klíma</span>
           </div>
-          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span></div>
+          <div class="lk-footer__meta"><span>© 2026 LELKI KLÍMA</span><a href="#adatvedelem">ADATVÉDELEM</a><button type="button" data-consent-open>SÜTIBEÁLLÍTÁSOK</button></div>
         </div>
       </footer>
     </section>
   </div>
 
 </div>
+
+<!-- ============ SÜTISÁV ============ -->
+<div id="consent-banner" class="lk-consent" role="region" aria-label="Sütihozzájárulás" hidden>
+  <p class="lk-consent__txt">Sütiket használok, hogy lássam, hogyan használják az oldalt (Google Analytics). Csak a hozzájárulásoddal. <a href="#adatvedelem">Adatvédelmi tájékoztató</a></p>
+  <div class="lk-consent__actions">
+    <button type="button" class="lk-consent__btn" data-consent="granted">Elfogadom</button>
+    <button type="button" class="lk-consent__btn" data-consent="denied">Elutasítom</button>
+  </div>
+</div>
+
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin: "https://cal.com"});
+  Cal("ui", {hideEventTypeDetails: false, layout: "month_view"});
+  // Popup only once embed.js has actually loaded; until then the links stay plain links.
+  document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
+    .addEventListener('load', function () { window.lkCalReady = true; });
+</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
