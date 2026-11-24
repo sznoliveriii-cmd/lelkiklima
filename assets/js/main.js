@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var VIEWS = ['bemutatkozas', 'szolgaltatasok', 'kapcsolat'];
+  var VIEWS = ['bemutatkozas', 'szolgaltatasok', 'kapcsolat', 'adatvedelem'];
   var body = document.body;
   var views = document.querySelectorAll('.lk-view');
   var menuToggle = document.getElementById('menu-toggle');
@@ -74,6 +74,7 @@
         if (data.success) {
           submitLabel.textContent = SENT_LABEL;
           submitted = true;
+          gtag('event', 'generate_lead');
         } else {
           submitLabel.textContent = ERROR_LABEL;
           submitBtn.disabled = false;
@@ -83,5 +84,64 @@
         submitLabel.textContent = ERROR_LABEL;
         submitBtn.disabled = false;
       });
+  });
+
+  // ---- Sütihozzájárulás (Consent Mode v2) ----
+  var CONSENT_KEY = 'lk-consent';
+  var banner = document.getElementById('consent-banner');
+  var storedConsent = null;
+  try { storedConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+  if (storedConsent !== 'granted' && storedConsent !== 'denied') banner.hidden = false;
+
+  function setConsent(state) {
+    gtag('consent', 'update', {
+      ad_storage: state,
+      ad_user_data: state,
+      ad_personalization: state,
+      analytics_storage: state
+    });
+  }
+
+  // Withdrawing consent must also drop the _ga cookies set while it was granted.
+  function deleteAnalyticsCookies() {
+    var host = location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name.indexOf('_ga') !== 0) return;
+      [location.hostname, '.' + host].forEach(function (domain) {
+        document.cookie = name + '=; Max-Age=0; path=/; domain=' + domain;
+      });
+      document.cookie = name + '=; Max-Age=0; path=/';
+    });
+  }
+
+  banner.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-consent]');
+    if (!btn) return;
+    var choice = btn.dataset.consent;
+    if (choice === 'granted') {
+      setConsent('granted');
+    } else if (storedConsent === 'granted') {
+      setConsent('denied');
+      deleteAnalyticsCookies();
+    }
+    storedConsent = choice;
+    try { localStorage.setItem(CONSENT_KEY, choice); } catch (err) {}
+    banner.hidden = true;
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-consent-open]')) banner.hidden = false;
+  });
+
+  // ---- Cal.com popup + események ----
+  document.addEventListener('click', function (e) {
+    if (window.lkCalReady && e.target.closest('a[data-cal-link]')) e.preventDefault();
+    if (e.target.closest('a[href^="tel:"]')) gtag('event', 'click_to_call');
+  });
+
+  Cal('on', {
+    action: 'bookingSuccessful',
+    callback: function () { gtag('event', 'book_appointment'); }
   });
 })();
