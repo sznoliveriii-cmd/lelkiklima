@@ -236,12 +236,14 @@ a.lk-cloud--pill.lk-cloud--label:hover { color: var(--gold-300); }
 
 /* ---- Home ---- */
 
+/* No scroll snapping: the hero is often taller than the viewport, and every
+   snap variant either jumped readers past the definition or trapped slow
+   wheel scrolling at a band. The full-height bands already show one menu
+   item per screen. */
 .lk-snap {
-  scroll-snap-type: y mandatory;
   height: 100vh;
   overflow-y: auto;
 }
-.lk-snap > * { scroll-snap-align: start; scroll-snap-stop: always; }
 
 .lk-hero {
   min-height: 100vh;
