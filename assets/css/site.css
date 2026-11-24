@@ -515,8 +515,6 @@ a.lk-cloud--pill.lk-cloud--label:hover { color: var(--gold-300); }
 .lk-priced__price--custom { color: var(--text-gold-lg); }
 .lk-priced__price small { font-size: 0.875rem; color: var(--text-muted); }
 
-.lk-priced__cta { margin-top: var(--space-4); }
-
 .lk-first-line {
   margin: var(--space-8) 0 0;
   font-family: var(--font-serif);
